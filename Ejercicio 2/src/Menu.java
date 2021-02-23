@@ -1,39 +1,47 @@
 /**
  * Menu de operaciones.
- * 
+ *
  */
 public class Menu {
-    
-    /**
-     * Opciones del menú.
-     */
-    String opciones[];
-    
-    /**
-     * Número total de opciones.
-     */
-    int nOpciones;
-    
-    /**
-     * Primera opción libre.
-     */
-    int opcionLibre;
 
-    /**
-        * Crea una menú de opciones con un número de opciones.
-        * @param nO Número de opciones.
-        */
-    public Menu(int nO) {...}
-    
-    /**
-     * Añade una opción al menú.
-     * @param op Opción del menú.
-     */
-    public void addOpcion(String op) {...}
-    
-    /**
-      * Obtiene sólo las opciones introducidas en el menú.
-      * @return Opciones del menú.
-      */
-    public String[] getOpciones() {...}
+  /**
+   * Opciones del menï¿½.
+   */
+  String opciones[];
+
+  /**
+   * Nï¿½mero total de opciones.
+   */
+  int nOpciones;
+
+  /**
+   * Primera opciï¿½n libre.
+   */
+  int opcionLibre = 0;
+
+  /**
+   * Crea una menï¿½ de opciones con un nï¿½mero de opciones.
+   * @param nO Nï¿½mero de opciones.
+   */
+  public Menu(int nO) {
+    this.nOpciones = nO;
+    this.opciones = new String[nOpciones];
+  }
+
+  /**
+   * Aï¿½ade una opciï¿½n al menï¿½.
+   * @param op Opciï¿½n del menï¿½.
+   */
+  public void addOpcion(String op) {
+    if (opcionLibre < nOpciones) opciones[opcionLibre] = op;
+    opcionLibre++;
+  }
+
+  /**
+   * Obtiene sï¿½lo las opciones introducidas en el menï¿½.
+   * @return Opciones del menï¿½.
+   */
+  public String[] getOpciones() {
+    return this.opciones;
+  }
 }
