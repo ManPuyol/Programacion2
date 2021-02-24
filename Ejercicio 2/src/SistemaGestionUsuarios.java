@@ -63,15 +63,19 @@ public class SistemaGestionUsuarios {
     int i;
 
     for (i = 0; i < usuarios.length; i++) {
-      if (this.usuarios[i].getLogin() == login) {
+      if (
+        this.usuarios[i].getLogin() == login &&
+        this.usuarios[i].getPassword() == password
+      ) {
         auth = true;
+        break;
       }
     }
 
     if (auth == false) {
       return null;
     } else {
-      return this.menus[i-1];
+      return this.menus[i];
     }
   }
 }
