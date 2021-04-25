@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 public class LoginTest {
 
   /**
@@ -9,17 +11,18 @@ public class LoginTest {
     if (activeMenu == null) {
       System.out.println("Credenciales invalidas");
     } else {
-      String opcionesMenuActivo[] = activeMenu.getOpciones();
+      ArrayList<String> opcionesMenuActivo = new ArrayList<String>();
+      opcionesMenuActivo = activeMenu.getOpciones();
 
       System.out.println("Menu del Usuario");
 
-      for (var i = 0; i < opcionesMenuActivo.length; i++) {
-        System.out.println(opcionesMenuActivo[i]);
+      for (int i = 0; i < opcionesMenuActivo.size(); i++) {
+    	  System.out.println(opcionesMenuActivo.get(i));
       }
     }
   }
 
-  public static void main(String[] args) {
+  public static void main(String[] args) throws Exception {
 	  //
     String logg = "manolo1", pass = "password";
     SistemaGestionUsuarios sgu = new SistemaGestionUsuarios(5);
@@ -59,5 +62,6 @@ public class LoginTest {
   
     mostrarMenu(sgu.autentificaUsuario(logg, pass));
     mostrarMenu(sgu.autentificaUsuario("logg", "pass"));
+    mostrarMenu(sgu.autentificaUsuario("loggo", "manolete"));
   }
 }

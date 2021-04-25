@@ -6,8 +6,9 @@ public class Cuadrado extends Rectangulo {
     super(x, y, lado, lado);
     this.lado = lado;
   }
-
-  public double perimetro() {
-    return 4 * lado;
-  }
+  
+ // NO es necesario Re - escribir este metodo porque ya existe en la clase Rectangulo
+ // public double perimetro() {
+ //   return 4 * lado;
+ // }
 }

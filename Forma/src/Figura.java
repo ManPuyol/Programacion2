@@ -9,4 +9,6 @@ public abstract class Figura {
   }
 
   abstract double perimetro();
+
+  abstract double area();
 }

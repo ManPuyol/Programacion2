@@ -10,4 +10,8 @@ public class Circulo extends Figura {
   public double perimetro() {
     return 2 * Math.PI * radio;
   }
+
+  public double area() {
+    return Math.PI * radio * radio;
+  }
 }

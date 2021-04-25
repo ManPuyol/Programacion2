@@ -1,0 +1,5 @@
+-Dfile.encoding=Cp1252
+-classpath
+"C:\\Users\\pelai\\eclipse-workspace\\Microondas\\bin"
+-XX:+ShowCodeDetailsInExceptionMessages
+src.mainMicroondas

@@ -1,0 +1,61 @@
+@startuml
+
+component MxRoc [ MxRoc 
+
+--
+ponerEnMarcha()
+programar()
+infoPrograma()
+]
+component ProgramaMicro [ProgramaMicro
+
+--
+activar() 
+potencia()
+nombre()
+duracion()
+]
+
+component SelectorGrill [SelectorGrill
+
+--
+fijarGrill(int)
+Grill()
+grillMaxima()
+]
+component SelectorPotencia [SelectorPotencia
+
+--
+fijarPotencia(int)
+potencia()
+grillMaxima()
+]
+component SelectorTiempo [SelectorTiempo
+
+--
+fijarTiempo(int)
+tiempo()
+tiempoMaximo()
+]
+
+[MxRoc] <.left. [ProgramaMicro] : Posee
+[MxRoc] <.up.[SelectorGrill] : Posee
+[MxRoc] <.up. [SelectorPotencia] : Posee
+[MxRoc] <.up. [SelectorTiempo] : Posee
+
+[MxRoc] <.. [MxRoc1] : extends
+[MxRoc1] <.. [MxRoc2] : extends
+[MxRoc2] <.. [MxRoc3] : extends
+
+
+
+
+note right of MxRoc1 : 3 Programas sin grill
+note right of MxRoc2 : 3 Programas de microondas y 1 grill
+note right of MxRoc3 : 4 Programas y 2 grill
+
+note right of [MxRoc]
+  Microondas base
+end note
+
+@enduml

@@ -59,23 +59,17 @@ public class SistemaGestionUsuarios {
    * @return Men� asociado al usuario o <i>null</i>.
    */
   public Menu autentificaUsuario(String login, String password) {
-    boolean auth = false;
-    int i;
 
-    for (i = 0; i < usuarios.length; i++) {
+    for (int i = 0; i < usuarios.length; i++) {
       if (
         this.usuarios[i].getLogin() == login &&
         this.usuarios[i].getPassword() == password
       ) {
-        auth = true;
-        break;
+    	  return this.menus[i];
       }
     }
-
-    if (auth == false) {
+    
       return null;
-    } else {
-      return this.menus[i];
-    }
+    
   }
 }
