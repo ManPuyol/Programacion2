@@ -51,6 +51,7 @@ public class Texto implements Figura{
 		System.out.println("ENTRA3");
 		System.out.println(y1);
 		System.out.println(x1);
+		
 		g.drawString(text,x1, y1);		
 			
 	}
